@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="images/hello.jpg" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <!-----> <header>
+
+        <div id="menu-bar" class="bi bi-list"></div>
+
+        <a href="#" class="logo"><span>Chust<i class="bi bi-mortarboard-fill"></i></span>IM</a>
+
+        <nav class="navbar">
+            <a href="index.html"><i class="bi bi-house-door-fill" id="icon1"></i>bosh sahifa</a>
+            <a href="index.html#gallery"><i class="bi bi-card-image" id="icon1"> </i>gallery</a>
+            <a href="#packagess"><i class="bi bi-bookmark-check-fill" id="icon1"></i>tarixi</a>
+            <a href="#services"><i class="bi bi-gear-fill" id="icon1"></i>services</a>
+            <a href="#packages"><i class="bi bi-bookmark-check-fill" id="icon1"></i>book</a>
+            <a href="#maps"><i class="bi bi-journal-bookmark-fill" id="icon1"></i>journal</a>
+            <a href="#"><img src="images/1.jpg"></a>
+        </nav>
+
+        <div class="icons">
+            <label class="switch">
+				<input type="checkbox" onclick="changeMode()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"  class="slider"; fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                    <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                  </svg>
+                 
+			</label>    
+
+
+
+
+        </div>        
+    </header>
+        </form>
+    
+        <div class="textgr">
+     <h1 class="chusts">        <h2 class="heading">
+        <span>C</span>
+        <span>h</span>
+        <span>U</span>
+        <span>S</span>
+        <span class="surish">T-</span>
+        <span>S</span>
+        <span class="surish">s-</span>
+        <span>T</span>
+        <span>I</span>
+        <span>M</span>
+        <span>E</span>
+        <span>S</span>
+        
+    </h2></h1>
+        </div>
+        <style>
+            .textgr{
+                width: 100%;
+                height: 9vh;
+                margin-top: 80px;
+            }
+            .textgr .chusts{
+                text-align: center;
+                font-size: 50px;
+            }
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.surish{
+   width: 5px;
+   height: 10px;
+   background-color: black;
+}
+body {
+    height: 100vh;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: powderblue;
+}
+
+/* Book */
+.book {
+    position: relative;
+    width: 500px;
+    height: 650px;
+    transition: transform 0.5s;  
+}
+.forst1{
+    width: 550px;
+    height: 700px;
+}
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+}
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid powderblue;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(k-2.jpg);
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+.kitob{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+/*
+i {
+    
+    color: gray;
+}
+*/
+/* Paper stack order */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+#knopkacha{
+    font-size: 50px;
+}
+@media (max-width:450px) {
+    .book {
+    position: relative;
+    width: 100px;
+    height: 250px;
+    transition: transform 0.5s; 
+}
+.heading{
+    font-size: 1px;
+} 
+}
+
+
+        </style>
+    <div class="kitob">
+         <button id="prev-btn">
+            <i class="bi bi-arrow-left-circle" id="knopkacha"></i>
+        </button>
+    
+    
+        <!-- Book -->
+        <div id="book" class="book">
+            <!-- Paper 1 -->
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="front-content">
+                        <img src="k-2.jpg" class="forst1">
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <h1>Back 1</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 2 -->
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="front-content">
+                        <h1>Front 2</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <h1>Back 2</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 3 -->
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <h1>Front 3</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <h1>Back 3</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Next Button -->
+        <button id="next-btn">
+            <i class="bi bi-arrow-right-circle" id="knopkacha"></i>
+        </button>
+        </div>
+<script>
+    // References to DOM Elements
+const prevBtn = document.querySelector("#prev-btn");
+const nextBtn = document.querySelector("#next-btn");
+const book = document.querySelector("#book");
+
+const paper1 = document.querySelector("#p1");
+const paper2 = document.querySelector("#p2");
+const paper3 = document.querySelector("#p3");
+
+// Event Listener
+prevBtn.addEventListener("click", goPrevPage);
+nextBtn.addEventListener("click", goNextPage);
+
+// Business Logic
+let currentLocation = 1;
+let numOfPapers = 3;
+let maxLocation = numOfPapers + 1;
+
+function openBook() {
+    book.style.transform = "translateX(50%)";
+    prevBtn.style.transform = "translateX(-250px)";
+    nextBtn.style.transform = "translateX(250px)";
+}
+
+function closeBook(isAtBeginning) {
+    if(isAtBeginning) {
+        book.style.transform = "translateX(0%)";
+    } else {
+        book.style.transform = "translateX(100%)";
+    }
+    
+    prevBtn.style.transform = "translateX(0px)";
+    nextBtn.style.transform = "translateX(0px)";
+}
+
+function goNextPage() {
+    if(currentLocation < maxLocation) {
+        switch(currentLocation) {
+            case 1:
+                openBook();
+                paper1.classList.add("flipped");
+                paper1.style.zIndex = 1;
+                break;
+            case 2:
+                paper2.classList.add("flipped");
+                paper2.style.zIndex = 2;
+                break;
+            case 3:
+                paper3.classList.add("flipped");
+                paper3.style.zIndex = 3;
+                closeBook(false);
+                break;
+            default:
+                throw new Error("unkown state");
+        }
+        currentLocation++;
+    }
+}
+
+function goPrevPage() {
+    if(currentLocation > 1) {
+        switch(currentLocation) {
+            case 2:
+                closeBook(true);
+                paper1.classList.remove("flipped");
+                paper1.style.zIndex = 3;
+                break;
+            case 3:
+                paper2.classList.remove("flipped");
+                paper2.style.zIndex = 2;
+                break;
+            case 4:
+                openBook();
+                paper3.classList.remove("flipped");
+                paper3.style.zIndex = 1;
+                break;
+            default:
+                throw new Error("unkown state");
+        }
+
+        currentLocation--;
+    }
+}
+</script>
+    </div>
+</div>
+        
